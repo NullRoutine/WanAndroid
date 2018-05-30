@@ -1,0 +1,26 @@
+<!--pages/project/project.wxml-->
+<view class='project'>
+  <scroll-view class='nav_scroll' scroll-x="true" scroll-left="{{scrollLeftValue}}">
+    <view class="nav_head {{currentSelect==index?'active':''}}" wx:for='{{headList}}' wx:key="unique" data-idx='{{index}}' bindtap='headSelcet'>{{item.name}}</view>
+  </scroll-view>
+
+  <swiper class='nav_swiper' style='height:{{swiperHeight}}px' bindchange='swiperChange' current='{{currentSelect}}'>
+    <block wx:for="{{headList}}" wx:for-item="cItem" wx:key="unique">
+      <swiper-item>
+        <scroll-view style='height:100%' scroll-y="true" bindscrolltolower="downloadMoreItem" bindscrolltoupper="updateItem">
+          <view class='view_content' wx:for='{{articleList[currentSelect]}}' wx:key="unique">
+            <view class='view_left'>
+              <image class='img_left' src='{{item.envelopePic}}' mode='aspectFill'></image>
+            </view>
+            <view class='view_right'>
+              <text class='text_title'>{{item.title}}</text>
+              <text class='text_desc'>{{item.desc}}</text>
+              <text class='text_desc'>{{item.niceDate}} {{item.author}}</text>
+            </view>
+
+          </view>
+        </scroll-view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

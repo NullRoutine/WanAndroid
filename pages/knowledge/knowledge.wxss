@@ -1,0 +1,53 @@
+/* pages/knowledge/knowledge.wxss */
+
+.knowledge {
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+}
+
+.view_content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  background-color: #fff;
+  /* border-width: 2px;
+  border-color: #2e3135;
+  border-style: solid;
+  border-radius: 3px; */
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  box-shadow: 1rpx 2rpx 2rpx 2rpx #bfbfbf;
+  border-radius: 3px;
+}
+
+.view_title {
+  text-align: center;
+}
+
+.view_item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.view_item_two {
+  flex-wrap: nowrap;
+  margin-right: 10rpx;
+}
+
+.text_title {
+  font-size: 16px;
+  color: #2e3135;
+}
+
+.text_item {
+  font-size: 14px;
+  color: #545c63;
+}

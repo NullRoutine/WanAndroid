@@ -1,0 +1,28 @@
+<!--pages/home/home.wxml-->
+<view class='home'>
+  <swiper indicator-dots='true' autoplay='true' circular='true' duration='500' interval='3000'>
+    <block wx:for='{{banner}}' wx:key="unique">
+      <swiper-item>
+        <image class='slide_img' src='{{item.imagePath}}' bindtap='itemClick' data-url='{{item.url}}'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class='view_content' wx:for='{{articleList}}' wx:key="unique" bindtap='itemClick' data-url='{{item.link}}'>
+    <view class='view_left'>
+      <view class='view_classify'>
+        <image class='img_photo' src='../../image/icon/ic_author.png'></image>
+        <text class='text_classify'>{{item.author}}</text>
+      </view>
+      <text class='text_title'>{{item.title}}</text>
+      <!-- <text class='text_desc'>{{item.desc}}</text> -->
+      <view class='view_classify'>
+        <text class='text_classify' decode="{{true}}">分类:&nbsp;{{item.chapterName}}&nbsp;&nbsp;{{item.niceDate}}</text>
+      </view>
+    </view>
+    <!-- <view class='view_right'>
+      <image src='{{item.envelopePic}}'></image>
+    </view> -->
+  </view>
+  <view class="loading" hidden="{{!searchLoading}}">加载中...</view>  
+</view>

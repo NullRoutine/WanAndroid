@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/knowledge/knowledge",
+    "pages/aboutme/aboutme",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/navigation/navigation",
+    "pages/project/project",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00abff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#00abff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "image/tabbar/home.png",
+        "selectedIconPath": "image/tabbar/home_select.png"
+      },
+      {
+        "pagePath": "pages/knowledge/knowledge",
+        "text": "知识体系",
+        "iconPath": "image/tabbar/knowledge.png",
+        "selectedIconPath": "image/tabbar/knowledge_select.png"
+      },
+      {
+        "pagePath": "pages/navigation/navigation",
+        "text": "导航",
+        "iconPath": "image/tabbar/navigation.png",
+        "selectedIconPath": "image/tabbar/navigation_select.png"
+      },
+      {
+        "pagePath": "pages/project/project",
+        "text": "项目",
+        "iconPath": "image/tabbar/project.png",
+        "selectedIconPath": "image/tabbar/project_select.png"
+      },
+      {
+        "pagePath": "pages/aboutme/aboutme",
+        "text": "我的",
+        "iconPath": "image/tabbar/about.png",
+        "selectedIconPath": "image/tabbar/about_select.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

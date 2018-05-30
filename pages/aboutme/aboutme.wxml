@@ -1,0 +1,22 @@
+<!--pages/aboutme/aboutme.wxml-->
+<view class='content'>
+  <view class='view_top'>
+    <image class='img' src='{{userInfo.avatarUrl}}'></image>
+    <button class='btn' wx:if="{{!hasUserInfo && canIUse}}"  open-type="getUserInfo" bindgetuserinfo="userInfoHandler"> {{userName}} </button>
+    <text wx:else class='text_name' open-type="getUserInfo" bindgetuserinfo="userInfoHandler">{{userInfo.nickName}}</text>
+  </view>
+  <view class='view_center'>
+    <view class='view_item'>
+      <image class='keyImage' src='../../image/icon/ic_collection.png'></image>
+      <label class='view_lable'>收藏</label>
+      <image class='img_arrow' src='../../image/icon/ic_arrow.png'></image>
+    </view>
+    <view class='line'></view>
+    <view class='view_item'>
+      <image class='keyImage' src='../../image/icon/ic_exit.png'></image>
+      <label class='view_lable'>退出登录</label>
+      <image class='img_arrow' src='../../image/icon/ic_arrow.png'></image>
+    </view>
+     <view class='line'></view>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+<!--pages/navigation/navigation.wxml-->
+<view class='navigation'>
+  <scroll-view class='nav_left' scroll-y='true' scroll-top='{{scrollTop}}' scroll-with-animation='true'>
+    <view class="nav_left_item {{currentSelect == index? 'avtive':''}}" wx:for='{{classifyList}}' wx:key='unique' bindtap="selectTab" data-index="{{index}}">{{item.name}}</view>
+  </scroll-view>
+
+  <view class='nav_right'>
+    <view class='nav_right_item'>
+      <view wx:for='{{rightList}}' wx:key='unique' bindtap='itemClick' data-url='{{item.link}}'>{{item.title}}</view>
+    </view>
+  </view>
+</view>

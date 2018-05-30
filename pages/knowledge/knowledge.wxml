@@ -1,0 +1,13 @@
+<!--pages/knowledge/knowledge.wxml-->
+<view class='knowledge'>
+  <view class='view_content' wx:for='{{firstList}}' wx:key='unique'>
+    <view class='view_title'>
+      <text class='text_title'>{{item.name}}</text>
+    </view>
+    <view class='view_item'>
+      <view class='view_item_two' wx:for='{{item.children}}' wx:key='unique'>
+        <text class='text_item'>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+</view>

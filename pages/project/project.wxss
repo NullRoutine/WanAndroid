@@ -1,0 +1,108 @@
+/* pages/project/project.wxss */
+
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.nav_scroll {
+  position: fixed;
+  z-index: 2;
+  white-space: nowrap;
+  display: flex;
+  overflow: hidden;
+  height: 80rpx;
+  background: #fff;
+  flex: none;
+}
+
+.nav_head {
+  line-height: 80rpx;
+  width: 200rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  font-size: 16px;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  color: black;
+}
+
+.active {
+  color: #00abff;
+}
+
+.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2rpx;
+  background: #00abff;
+}
+
+.nav_swiper {
+  margin-top: 80rpx;
+}
+
+.view_content {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  box-shadow: 1rpx 2rpx 2rpx 2rpx #bfbfbf;
+  border-radius: 3px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.view_content .view_left {
+  display: flex;
+  width: 25%;
+  margin-top: 10rpx;
+}
+.img_left{
+  height: 260rpx;
+}
+.view_content .view_right {
+  display: flex;
+  width: 75%;
+  margin-top: 10rpx;
+  margin-left: 14rpx;
+  margin-right: 14rpx;
+  margin-bottom: 10rpx;
+  flex-direction: column;
+}
+
+.text_title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 18px;
+}
+
+.text_desc {
+  margin-top: 20rpx;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  color: #808080;
+  display: -webkit-box;
+  word-break: break-all;
+}
